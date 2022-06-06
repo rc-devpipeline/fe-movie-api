@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Movie API - Login</title>
+
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+			integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+			crossorigin="anonymous"
+			referrerpolicy="no-referrer"
+		/>
+		<script src="./static/scripts/components/header.js"></script>
+		<link rel="stylesheet" href="../static/styles/common.css" />
+		<link rel="stylesheet" href="../static/styles/login.css" />
+	</head>
+	<body>
+		<header-component></header-component>
+		<div class="login-container">
+			<div class="login-container-image"></div>
+
+			<div class="login-container-auth">
+				<form
+					class="login-container-form"
+					action="/api/auth/login"
+					method="post"
+				>
+					<div>
+						<label for="user_name"><i class="fa-solid fa-user"></i></label>
+						<input
+							type="text"
+							placeholder="email or username"
+							name="user_name"
+						/>
+					</div>
+
+					<div>
+						<label for="password"><i class="fa-solid fa-key"></i></label>
+						<input type="password" placeholder="password" name="password" />
+					</div>
+
+					<button>Login</button>
+					<div class="account-container">
+						<div>
+							No Account? <a href="/register">Register</a>
+						</div>
+						
+						<div>
+							Forgot Password? <a href="/recover">Register</a>
+						</div>
+					</div>
+				</form>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
