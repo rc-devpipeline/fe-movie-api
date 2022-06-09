@@ -58,6 +58,7 @@ router.post("/login", async (req, res) => {
 		newSession.save().then(loginResponse).catch(errResponse);
 	}
 });
+
 // Verify Role
 router.get("/logout", verifyToken, getSession, (req, res) => {
 	if (!req.userSession?._id) {
@@ -80,6 +81,10 @@ router.get("/logout", verifyToken, getSession, (req, res) => {
 
 		res.status(200).json({ message: "Success" });
 	});
+});
+
+router.get("/cl", getSession, (req, res) => {
+	res.status(200).json({ message: "logged in" });
 });
 
 module.exports = router;

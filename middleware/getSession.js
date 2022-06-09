@@ -1,3 +1,5 @@
+const SessionModel = require("../models/sessionModel");
+
 async function getSession(req, res, next) {
 	try {
 		const userId = req.user?._id || req.params?.id || req.body.id;

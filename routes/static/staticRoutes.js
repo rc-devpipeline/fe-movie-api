@@ -15,7 +15,7 @@ router.get("/login", (req, res) => {
 
 // dashboard
 router.get("/dashboard", verifyToken, (req, res) => {
-	res.send("dashboard.html");
+	res.sendFile("dashboard.html", root);
 });
 
 // forbidden
